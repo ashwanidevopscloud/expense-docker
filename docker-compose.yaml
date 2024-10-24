@@ -13,6 +13,7 @@ services:
   backend:
     image: ashwani525/backend:v1
     container_name: backend
+    command: sh -c "sleep 10" && node /opt/server/index.js
     depends_on:
     - mysql
   frontend:
