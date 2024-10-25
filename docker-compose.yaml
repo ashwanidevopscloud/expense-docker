@@ -2,7 +2,7 @@ version: "3.8"
 networks:
   expense:
 volumes:
-   mysql:
+  mysql:
 services:
   mysql:
     image: ashwani525/mysql:v1
