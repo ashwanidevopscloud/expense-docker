@@ -5,9 +5,9 @@ volumes:
    mysql:
 services:
   mysql:
-     image: ashwani525/mysql:v1
-     container_name: mysql # --name mysql
-     volumes:
+    image: ashwani525/mysql:v1
+    container_name: mysql # --name mysql
+    volumes:
       - mysql:/var/lib/mysql # -v mysql: /var/lib/mysql
 
   backend:
@@ -15,14 +15,14 @@ services:
     container_name: backend
     command: sh -c "sleep 10" && node /opt/server/index.js"
     depends_on:
-    - mysql
+      - mysql
   frontend:
-   image: ashwani525/frontend:v1
-   container_name: frontend
-   ports: 
-    - 80:80
-   depends_on:
-    - backend
+    image: ashwani525/frontend:v1
+    container_name: frontend
+    ports: 
+      - 80:80
+    depends_on:
+      - backend
 
 
 
