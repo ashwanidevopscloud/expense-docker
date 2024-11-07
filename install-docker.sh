@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#check whether root user or not
-R="\e[31m"
-N="\e[0m" 
+# #check whether root user or not
+# R="\e[31m"
+# N="\e[0m" 
 
 yum install -y yum-utils
 yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
